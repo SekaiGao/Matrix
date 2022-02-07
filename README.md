@@ -3,7 +3,7 @@
 ***
 
 # 矩阵
-[![Gem Version](https://github.com/SekaiGao/Matrix)](https://badge.fury.io/rb/jekyll-theme-hydejack)
+[![Link](https://badge.fury.io/rb/jekyll-theme-hydejack.svg)](https://github.com/SekaiGao/Matrix)
 
 >**说明：** 该类是基于数值分析课上所授内并参考一些网上知识完成的。囊括了各种与矩阵相关的基本功能,可以满足基本的计算需求。由于并未使用大量例子进行测试，可能还有许多bug。
 
