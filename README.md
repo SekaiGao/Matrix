@@ -182,7 +182,7 @@ mat类重载了大量运算符:
 	Ainv.rref();
 	Ainv=Ainv.cuts(0,2,3,5);
 
-#####向量与范数相关方法
+##### 向量与范数相关方法
 交换矩阵第iloc和第jloc两行向量
 	
 	void swap_row(int iloc,int jloc)//行交换
@@ -204,7 +204,7 @@ p范数
 对角元范数
 
 	T dnorm(int p=2)
-#####矩阵分解
+##### 矩阵分解
 LU
 
 	void LU(mat&L,mat&U)//A=LU
@@ -252,7 +252,7 @@ SVD
 	*/
 	bool svd(mat&U,mat&S,mat&V)//精度不够高
 	bool SVD(mat&U,mat&S,mat&V)
-#####特征迭代
+##### 特征迭代
 jacobi正交变换求解对称矩阵特征值
 
 	mat jacobi(long double acc=0.01)//要自己设置精度，精度过高可能无法迭代出来
@@ -268,7 +268,7 @@ jacobi正交变换求解对称矩阵特征值
 	mat rqi(ld&lam)//反幂法，利用上次计算出的近似特征值作为lam迭代，返回对应特征向量
 	mat rit(ld&lam,ld s)//逆向幂迭代，迭代s附近的主特征值，并返回对应特征向量
 
-#####求解方程 Ax=b
+##### 求解方程 Ax=b
 全选主元的高斯消元法(gauss-jordan消元法)
 
 	mat gaussj(mat&b)//注意这里b使用行向量
@@ -288,7 +288,7 @@ jacobi正交变换求解对称矩阵特征值
 	eg.
 	x=A.Inv()*b.t();
 
-#####最小二乘解
+##### 最小二乘解
 
 	当向量b不在Col A中时，没有解。
 	此时用b在Col A上的投影向量x1作近似解，即最小二乘解。
@@ -297,7 +297,7 @@ jacobi正交变换求解对称矩阵特征值
 	方法1：解A'Ax1=A'b
 	方法2: A=QR -> 解Rx1=Q'b //精度更高的最小二乘解。
 	方法3：x1=pinv(A)b //该解是所有最小二乘解中的最逼近解。
-#####其他方法
+##### 其他方法
 施密特正交归一化
 
 	mat Schmidt()//正交归一化后的矩阵也就是QR分解的Q
@@ -330,10 +330,10 @@ Lanczos
 
 	mat singular()//获取所有奇异值
 ### 3.特殊矩阵
-#####希尔伯特矩阵(一个病态矩阵)
+##### 希尔伯特矩阵(一个病态矩阵)
 
 	mat<long double>hilb(int n)
-#####单位矩阵
+##### 单位矩阵
 
 	template<class T=ld>
 	mat<T>eye(int m,int n)
